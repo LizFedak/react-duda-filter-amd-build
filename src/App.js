@@ -15,7 +15,7 @@ const createIdGenerator = () => {
 const nextid = createIdGenerator();
 
 function App(props) {
-  const { bw, userName, theme, type, backToList, list, filters } = props;
+  const { list, filters } = props;
 
 
   let newfilters = filters.map(filter => {
@@ -27,7 +27,7 @@ function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-        <img className="h-full w-64" src="https://irp.cdn-website.com/md/pexels/dms3rep/multi/roof-plate-tiles-brick-black-48895.jpeg"></img>
+        <img alt="logo" className="h-full w-64" src="https://irp.cdn-website.com/md/pexels/dms3rep/multi/roof-plate-tiles-brick-black-48895.jpeg"></img>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -37,7 +37,7 @@ function App(props) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {theme}{userName}
+
         </a>
         <List list={list}/>
         <FilterBar filters={newfilters} list={list}/>
